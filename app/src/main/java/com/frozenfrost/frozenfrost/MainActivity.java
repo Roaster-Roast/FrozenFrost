@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             Toast toast= Toast.makeText(this, "SLIDE SHOW CLICKED", Toast.LENGTH_LONG);//This is where the error shows
             toast.show();
-        } else if (id == R.id.nav_manage) {
+        } /*else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        }*/ else if (id == R.id.nav_contact_us) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             ContactUs contactUs = new ContactUs();

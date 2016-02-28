@@ -5,22 +5,51 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="@string/slider_option_adress" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="@string/slider_option_create_order" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="@string/slider_option_offers" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_your_order"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="@string/slider_option_your_order" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_account" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_help" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_contact_us" />
+        <item
+            android:id="@+id/nav_join_us"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_join_us" />
+
+        <item
+            android:id="@+id/nav_t_c"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_t_c" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_privacy" />
+        <item
+            android:id="@+id/nav_rate_us"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/slider_option_rate_us" />
     </group>
 
-    <item android:title="Communicate">
+    <!--<item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -31,6 +60,6 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
         </menu>
-    </item>
+    </item>-->
 
 </menu>

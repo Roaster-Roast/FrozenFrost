@@ -8,4 +8,18 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slider_option_adress">Address/Current Location</string>
+    <string name="slider_option_create_order">Create Order</string>
+    <string name="slider_option_offers">Offers/Deals</string>
+    <string name="slider_option_your_order">Your Orders</string>
+    <string name="slider_option_account">My Account</string>
+    <string name="slider_option_help">Help &amp; FAQs</string>
+    <string name="slider_option_contact_us">Contact Us</string>
+    <string name="slider_option_join_us">Join Us/Partner</string>
+    <string name="slider_option_t_c">Terms &amp; Conditions</string>
+    <string name="slider_option_privacy">Privacy Policy</string>
+    <string name="slider_option_rate_us">Rate Us</string>
+    <string name="from_email_id">roasterroast@gmail.com</string>
+    <string name="from_email_password">roasted123</string>
+
 </resources>
