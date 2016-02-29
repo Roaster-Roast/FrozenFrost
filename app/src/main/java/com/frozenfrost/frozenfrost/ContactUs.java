@@ -32,23 +32,14 @@ public class ContactUs extends Fragment {
 
             public void onClick(View v) {
                 Log.i("ContactUs", "Send Button Clicked.");
-
                 String fromEmail = getResources().getString(R.string.from_email_id);
                 String fromPassword = getResources().getString(R.string.from_email_password);
-                String toEmails = ((TextView) view.findViewById(R.id.contact_us_edittext1))
-                        .getText().toString();
-                List toEmailList = Arrays.asList(toEmails
-                        .split("\\s*,\\s*"));
+                String toEmails = ((TextView) view.findViewById(R.id.contact_us_edittext1)).getText().toString();
+                List toEmailList = Arrays.asList(toEmails.split("\\s*,\\s*"));
                 Log.i("SendMailActivity", "To List: " + toEmailList);
                 String emailSubject = "New Query Generated..";
                 String emailBody = ((TextView) view.findViewById(R.id.contact_us_edittext2)).getText().toString();
                 new SendMailTask(getActivity()).execute(fromEmail,fromPassword, toEmailList, emailSubject, emailBody);
-                System.out.println("Email from:::"+fromEmail);
-                System.out.println("\n Email pass:::"+fromPassword);
-                System.out.println("\n Email to:::"+toEmails);
-                System.out.println("\n emailBody:::"+emailBody);
-
-
             }
         });
     }
