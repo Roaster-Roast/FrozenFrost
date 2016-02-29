@@ -6,6 +6,6 @@ package com.frozenfrost.frozenfrost;
 public class Utility {
     public static boolean isValidString(String value)
     {
-        return (!"".equals(value.trim()) && value.trim() != null && value.trim().length()>=1);
+        return (!"".equals(value.trim()) && value.trim() != null && !value.isEmpty() && value.trim().length()>=1);
     }
 }
