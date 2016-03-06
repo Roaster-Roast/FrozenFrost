@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -24,6 +26,17 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        DBHelper dbHelper=new DBHelper(getApplicationContext());
+        //
+        // dbHelper.getWritableDatabase();
+        HashMap hMap=new HashMap();
+        hMap.put("USER_ID", "1");
+        hMap.put("USER_NAME", "adm");
+        hMap.put("PASSWORD", "tiger");
+        //hMap.put("ADDRESS", "NOIDA");
+        boolean recordInserted=dbHelper.insertRow(hMap);
+        dbHelper.close();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -96,6 +109,16 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             ContactUs contactUs = new ContactUs();
             fragmentTransaction.replace(R.id.mainFragment, contactUs);
+            fragmentTransaction.commit();
+            TextView textView = (TextView)findViewById(R.id.contentTextView);
+            textView.setVisibility(View.GONE);
+        }
+        else if (id == R.id.nav_account) {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+           // ContactUs contactUs = new ContactUs();
+            Login login=new Login();
+            fragmentTransaction.replace(R.id.mainFragment, login);
             fragmentTransaction.commit();
             TextView textView = (TextView)findViewById(R.id.contentTextView);
             textView.setVisibility(View.GONE);
